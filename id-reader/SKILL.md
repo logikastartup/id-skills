@@ -50,6 +50,9 @@ is the rule.
 - `shopee-ibu` — bargain-hunting marketplace shopper
 - `startup-linkedin` — startup-industry LinkedIn reader
 - `wa-buyer` — WhatsApp-group buyer
+- `dev-docs` — developer reading docs (owner pass pending)
+- `tiktok-viewer` — Gen-Z TikTok native (owner pass pending)
+- `fb-user` — 35+ Facebook reader (owner pass pending)
 
 ## Adding a persona
 

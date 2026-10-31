@@ -1,7 +1,7 @@
 # register — the Indonesian marketing register ladder
 
 `component: SHARED` · `version: 1 (2026-10-31)` · reused by later id-* skills
-by versioned copy (`copied-from: id-copy@1`).
+by versioned copy (`copied-from: id-copy@v1`).
 
 Choose ONE level explicitly before drafting. Averaging levels is how copy
 becomes "safe and cheesy". Every example below is real and sourced.

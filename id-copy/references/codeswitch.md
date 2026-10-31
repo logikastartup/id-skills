@@ -33,7 +33,7 @@ prose: **destinasi** > tujuan, **selebrasi** > perayaan
 ([Tirto](https://tirto.id/benarkah-kita-semua-anak-jaksel-yang-tertunda-like-literally-cYhA)).
 Don't "correct" these back — the absorbed form IS the living word.
 
-## Slang status (dated <date> — slang has a shelf life)
+## Slang status (each entry carries its documentation date — slang has a shelf life)
 
 | Term | Status (as of source date) | Note | Source |
 |---|---|---|---|

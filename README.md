@@ -20,6 +20,23 @@ attack it from two sides:
   against the tells list — the two skills share no checklist (one author
   built both; the A/B honesty notes say what that does and doesn't cover).
 
+Expansion skills (2026-10-31 — four with their own two-sample blind
+A/Bs, receipts in `eval/verdicts/`; `id-bench`'s receipt is the demo
+mapping there):
+
+- **`id-translate`** — EN→ID translation that reads originally-written:
+  a parity ledger (claims, numbers, hedges never drift) plus a
+  transformation bank that kills calques and carried English structure.
+- **`id-longform`** — Indonesian articles and newsletters: stated angle,
+  sections-as-moves, against a documented scaffolding ban-list.
+- **`id-humanizer`** — de-slop any Indonesian text while preserving the
+  writer's voice. Every change named. Detects register instead of
+  choosing it.
+- **`id-social`** — TikTok scripts, LinkedIn, Facebook posts: one
+  component per platform, slang always dated, register per platform.
+- **`id-bench`** — blind persona A/B over any text variants: this repo's
+  own evaluation discipline, productized.
+
 ## Why believe it
 
 Examples and rules carry their source — KBBI entries verified live, real
@@ -51,12 +68,26 @@ kept (wild-3). Full outputs, uncropped:
 [`eval/verdicts/results.md`](eval/verdicts/results.md). n=2, blind,
 order-randomized — directional, not statistics.
 
+Expansion skills (2026-10-31, loop 5): **4/8 skill-arm picks** across
+four two-sample A/Bs — id-social 2/2, id-translate 1/2, id-longform
+1/2, id-humanizer 0/2 (kept; both its losses produced the skill's
+closing-formula fix the same day). Same protocol, same honesty rules:
+[`eval/verdicts/translate-ab.md`](eval/verdicts/translate-ab.md) ·
+[`humanize-ab.md`](eval/verdicts/humanize-ab.md) ·
+[`longform-ab.md`](eval/verdicts/longform-ab.md) ·
+[`social-ab.md`](eval/verdicts/social-ab.md).
+
 ## Layout
 
 ```
 id-copy/           the writing skill (thin router + 4 components)
   references/      register · tells · codeswitch · platforms  ← reusable
 id-reader/         the verdict skill (protocol + personas/)
+id-translate/      EN→ID with a parity ledger + transformation bank
+id-longform/       articles + newsletters (angle · moves · ban-list)
+id-humanizer/      de-slop any Indonesian text (voice ledger)
+id-social/         tiktok · linkedin · facebook — one file per platform
+id-bench/          the blind A/B harness (protocol + id-reader personas)
 eval/              samples → rewrites → verdicts; re-runnable
 ```
 
@@ -70,7 +101,10 @@ the same components by versioned copy.
 Copy a skill folder into your agent's skills directory (Claude Code:
 `~/.claude/skills/` or `.agents/skills/`; other agents: wherever skills
 live). `id-copy` works standalone; `id-reader` pairs with it for
-pre-publish verdicts.
+pre-publish verdicts. Each expansion skill works standalone too;
+`id-bench` needs `id-reader`'s personas (copy both folders). Shared
+components are versioned copies (`copied-from:` headers) — re-copy to
+update, never fork-edit.
 
 ## Status
 

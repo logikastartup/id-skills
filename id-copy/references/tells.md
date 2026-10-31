@@ -8,7 +8,9 @@ documented grammar, **[eval]** = learned from a reader verdict in
 
 1. **"Dalam dunia yang serba cepat ini…" / "Dalam era digital…" opener**
    — the ChatGPT signature. Fits any topic, so it fits nothing.
-   → Fix: open with a concrete hook — number, scene, problem.
+   → Fix: open with a concrete hook — number, scene, problem. If the
+   text supplies no lived detail and none can be asked for, flag it —
+   never stage a scene to satisfy the fix.
    **[doc — corpus-level]**: the phrase appears across 8 search-indexed
    pages; evidence is snippet-level (see `eval/samples/wild-3` caveats),
    not 8 fetched bodies.
@@ -101,5 +103,5 @@ documented grammar, **[eval]** = learned from a reader verdict in
 Medium "4 Tanda Kaku" (fetched) · Erafone "Ciri-Ciri Tulisan AI" (fetched)
 · Xerpihan Indonesian Localization Playbook (fetched) · BBPMP Jateng page
 (fetched) · Lemon8 corpus family · r/indonesia 2015 register-gap thread ·
-UNSW Johnson 2006 · SSRN EN-ID MT evaluation. Sample URLs live in
+UNSW Johnson 2006 · SSRN EN-ID MT evaluation. Sourced wild-sample URLs live in
 `../../eval/samples/`; re-verify any URL before quoting it externally.

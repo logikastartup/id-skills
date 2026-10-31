@@ -26,6 +26,26 @@ dari dua sisi:
   penulis membangun keduanya, apa yang dicakup dan tidaknya dijelaskan
   di catatan jujur soal A/B).
 
+Skill ekspansi (2026-10-31 — empat di antaranya dengan A/B buta dua
+sampel, strukturnya di `eval/verdicts/`. Receipt `id-bench` adalah
+pemetaan demo di folder yang sama):
+
+- **`id-translate`** — EN→ID yang terasa ditulis asli dari nol: buku
+  paritas (klaim, angka, dan keraguan tidak boleh melenceng) plus bank
+  transformasi pembunuh kalque dan struktur bahasa Inggris yang ikut
+  kebawa.
+- **`id-longform`** — artikel dan newsletter: angle dinyatakan,
+  bagian-per-gerakan, lawan daftar larangan perancah AI yang
+  terdokumentasi.
+- **`id-humanizer`** — bersihkan teks Indonesia apa pun dari lapisan
+  mesin tanpa menghapus penulisnya, tiap perubahan dicatat. Register
+  dideteksi, bukan dipilih.
+- **`id-social`** — script TikTok, post LinkedIn dan Facebook: satu
+  komponen per platform, slang selalu bertanggal, register per
+  platform.
+- **`id-bench`** — A/B buta persona untuk varian teks apa pun:
+  disiplin evaluasi repo ini, dijadikan produk.
+
 ## Kenapa layak dipercaya
 
 Setiap contoh dan aturan menyertakan sumbernya — entri KBBI yang dicek
@@ -59,11 +79,21 @@ Model yang sama, dengan vs tanpa skill — pembaca persona buta:
 | Promosi WA (gen-1) | trusted ✗ · would_act ✗ | ✓ · ✓ | versi skill |
 | Caption IG (gen-2) | trusted ✗ · would_act ✗ | ✓ · ✓ | versi skill |
 
-Sampel liar: 4 dari 5 flip semua verdict setelah ditulis ulang; satu
+Sampel liar: 4 dari 5 flip semua verdict setelah ditulis ulang, satu
 kegagalan jujur dipertahankan (wild-3). Output lengkap tanpa potongan di
 [`eval/verdicts/ab-arms.md`](eval/verdicts/ab-arms.md) ·
 [`eval/verdicts/results.md`](eval/verdicts/results.md). n=2, buta,
 urutan diacak — ini arah, bukan statistik.
+
+Skill ekspansi (2026-10-31, loop 5): **4 dari 8** pilihan pembaca jatuh
+ke versi skill, dari empat A/B dua sampel — id-social 2/2, id-translate
+1/2, id-longform 1/2, id-humanizer 0/2 (dipertahankan — dua
+kekalahannya justru menghasilkan perbaikan aturan penutup formula di
+hari yang sama). Protokol dan aturan kejujurannya sama:
+[`eval/verdicts/translate-ab.md`](eval/verdicts/translate-ab.md) ·
+[`humanize-ab.md`](eval/verdicts/humanize-ab.md) ·
+[`longform-ab.md`](eval/verdicts/longform-ab.md) ·
+[`social-ab.md`](eval/verdicts/social-ab.md).
 
 ## Struktur
 
@@ -71,6 +101,11 @@ urutan diacak — ini arah, bukan statistik.
 id-copy/           skill untuk menulis (router tipis + 4 komponen)
   references/      register · tells · codeswitch · platforms  ← dipakai ulang
 id-reader/         skill untuk verdict (protokol + personas/)
+id-translate/      EN→ID dengan buku paritas + bank transformasi
+id-longform/       artikel + newsletter (angle · gerakan · daftar larangan)
+id-humanizer/      bersihkan teks Indonesia apa pun (buku gaya penulis)
+id-social/         tiktok · linkedin · facebook, satu file per platform
+id-bench/          alat uji A/B buta (protokol + persona id-reader)
 eval/              sampel → rewrite → verdict, bisa diulang sendiri
 ```
 
@@ -86,7 +121,11 @@ menyalin komponen yang sama lengkap dengan penanda versinya.
 Salin folder skill ke direktori skill agent-mu (Claude Code:
 `~/.claude/skills/` atau `.agents/skills/`; agent lain: di mana pun
 skill diletakkan). `id-copy` bisa jalan sendiri. Untuk meminta verdict
-sebelum publikasi, pasangkan `id-reader` dengannya.
+sebelum publikasi, pasangkan `id-reader` dengannya. Tiap skill ekspansi
+juga bisa jalan sendiri. `id-bench` butuh persona milik `id-reader`
+(salin kedua foldernya). Komponen bersama disalin utuh dengan penanda
+versinya (header `copied-from:`) — perbarui dengan menyalin ulang,
+jangan menyunting salinannya sampai bercabang.
 
 ## Status
 

@@ -4,6 +4,26 @@ The skill ships with receipts: real cheesy-AI-Indonesian samples, rewritten
 through `id-copy`, judged before/after by `id-reader` personas — plus a
 blind A/B against the same model without the skill.
 
+## Per-skill evals (expansion skills, loop 5)
+
+Same rules as above (fresh judges, blind VERSION 1/2 labels, per-sample
+randomization recorded, no-rerun, arms retained, co-evolution +
+authorship disclosed, n named). All judges emit the `id-reader` verdict
+JSON + a forced PICK. Each skill below: n=2 samples → results are
+**directional** by construction.
+
+| Skill | Inputs (samples/) | Arm A (no skill) | Arm B | Blind judges |
+|---|---|---|---|---|
+| id-translate | `translate-1.md`, `translate-2.md` (EN sources, embedded prompts) | "translate these two texts into natural Indonesian" — no repo access | loads `id-translate/SKILL.md` + components, full flow | dev-docs (t-1) · fb-user (t-2) |
+| id-humanizer | `humanize-1.md`, `humanize-2.md` (stiff ID inputs) | "perbaiki agar terdengar lebih natural dan manusiawi" | loads `id-humanizer/SKILL.md` | fb-user (h-1) · dev-docs (h-2) |
+| id-longform | `longform-1.md`, `longform-2.md` (briefs) | "tulis dari brief ini" | loads `id-longform/SKILL.md` | dev-docs (lf-1) · fb-user (lf-2 — audience is pemilik toko) |
+| id-social | `social-1.md`, `social-2.md` (briefs) | plain write | loads `id-social/SKILL.md` + the one platform file | tiktok-viewer (s-1) · startup-linkedin (s-2) |
+| id-bench | demo = the four loop-5 A/Bs, recorded per its own protocol | — | — | (the run itself is the artifact: `verdicts/bench-demo.md`) |
+
+Arm B's process/verification notes are stripped before judging — arms
+are compared on text alone. Records land in `verdicts/<skill>-ab.md`
+(both arms verbatim + all verdict JSONs + the order used).
+
 ## Inputs
 
 - `samples/wild-*.md` — wild-caught Indonesian text showing documented AI/
