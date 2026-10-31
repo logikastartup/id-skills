@@ -1,7 +1,8 @@
 # persona: fb-user
 
-_Drafted from observation 2026-10-31 — owner correction pass pending; refine
-with research before v1 publish._
+_Drafted from observation 2026-10-31. Native-lens critic pass:
+2026-10-31, gauntlet loop 6 — machine ears, not the owner's.
+Corrections welcome via issue or PR._
 
 ## Who
 

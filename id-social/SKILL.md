@@ -35,13 +35,13 @@ one-line Indonesian gloss (English line = the rule).
    codeswitch.md alone doesn't). Every slang word carries
    `status: evergreen | dated <date> | dead`.
    *Indonesian:* Pilih register secara eksplisit dalam rentang
-   platform-nya; tiap kata slang dicatat statusnya — lestari atau
-   basi tanggal berapa.
+   platform-nya; tiap kata slang dicatat statusnya — masih hidup atau
+   basi, per tanggal berapa.
 4. **HOOK + STRUCTURE** — build the format's skeleton before drafting:
    a TikTok script is timed (hook lands in the first 2 seconds);
    a LinkedIn post is one idea in the first 2 lines; a Facebook post
    may run long and story-shaped.
-   *Indonesian:* Bangun kerangkanya dulu: script TikTok berpola waktu
+   *Indonesian:* Bangun kerangkanya dulu: script TikTok ketat waktunya
    (hook di dua detik pertama); post LinkedIn satu gagasan di dua baris
    pertama; post Facebook boleh panjang dan bercerita.
 5. **DRAFT + PLATFORM TELLS** — draft, then check against the shared

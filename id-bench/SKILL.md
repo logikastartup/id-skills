@@ -17,8 +17,8 @@ only**; the protocol lives in one file, personas come from `id-reader`.
    question the bench must answer (e.g. "which reads more natural?").
    Assign blind labels; randomize presentation order; write down the
    order you used.
-   *Indonesian:* Siapkan dua varian atau lebih dari satu tulisan, pilih
-   persona pembacanya, acak urutannya, catat urutan yang dipakai.
+   *Indonesian:* Siapkan dua varian atau lebih dari tulisan yang sama,
+   pilih persona pembacanya, acak urutannya, catat urutan yang dipakai.
 2. **JUDGE** — one fresh judge per SAMPLE: loads ONLY its persona file +
    that sample's variants (labeled VERSION 1/2/…). No tells list, no
    bench internals, no sight of other judges' output. It emits the
@@ -30,7 +30,7 @@ only**; the protocol lives in one file, personas come from `id-reader`.
    + retained JSONs + the mandatory honesty line when n is small:
    "directional, not statistics".
    *Indonesian:* Tampilkan tabelnya, simpan semua JSON, dan tulis
-   baris jujurnya: ini arah, bukan statistik.
+   baris jujurnya: ini sekadar petunjuk arah, bukan statistik.
 4. **ARCHIVE** — every variant verbatim (process notes stripped so
    arms are compared on text alone) + every verdict. See
    [`references/protocol.md`](references/protocol.md).

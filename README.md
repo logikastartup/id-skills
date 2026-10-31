@@ -14,15 +14,15 @@ attack it from two sides:
   explicit register choice, drafts against a documented tells blacklist,
   applies code-switch rules (which words stay English — verified against
   KBBI or source-marked), per-platform norms.
-- **`id-reader`** — read the copy *as a specific Indonesian reader*
+- **`id-reader`** — LLM persona agents read the copy *as a specific
+  Indonesian reader*
   (bargain-hunting marketplace shopper, startup LinkedIn reader,
   WhatsApp-group buyer) and emit a structured verdict. Readers grade by ear from their persona, never
   against the tells list — the two skills share no checklist (one author
   built both; the A/B honesty notes say what that does and doesn't cover).
 
 Expansion skills (2026-10-31 — four with their own two-sample blind
-A/Bs, receipts in `eval/verdicts/`; `id-bench`'s receipt is the demo
-mapping there):
+A/Bs, receipts in `eval/verdicts/`):
 
 - **`id-translate`** — EN→ID translation that reads originally-written:
   a parity ledger (claims, numbers, hedges never drift) plus a
@@ -39,43 +39,129 @@ mapping there):
 
 ## Why believe it
 
-Examples and rules carry their source — KBBI entries verified live, real
-brand campaigns, documented template corpora, dated slang statuses — and
-everything unsourced is marked as such (`pattern-level`, `[inf]`).
-The repo ships with **`eval/`** — wild-caught and reproducibly-generated
-AI-Indonesian samples, rewritten through `id-copy`, with before/after
-reader verdicts by persona (including one honest failure, kept) — and a
-**blind A/B**: the same model rewrote held-out samples with and without
-the skill; persona readers, blind and order-randomized, picked the
-skill-guided version both times ([`eval/verdicts/ab-test.md`](eval/verdicts/ab-test.md)).
-Re-run it yourself; the recipe is in [`eval/run.md`](eval/run.md).
+- **Sources ride along** — KBBI entries verified live, real brand
+  campaigns, documented template corpora, dated slang statuses.
+  Everything unsourced is marked (`pattern-level` = observed pattern,
+  `[inf]` = inference), never silent.
+- **`eval/` ships with the repo** — wild-caught and
+  reproducibly-generated AI-Indonesian samples, rewritten through
+  `id-copy`, with before/after reader verdicts by persona (including
+  one honest failure, kept).
+- **A blind A/B** — the same model rewrote held-out samples with and
+  without the skill; persona readers, blind and order-randomized,
+  picked the skill-guided version both times
+  ([`eval/verdicts/ab-test.md`](eval/verdicts/ab-test.md)). Re-run it
+  yourself: the recipe is in [`eval/run.md`](eval/run.md).
 
 These skills sharpen output; they replace no native ear. Every `id-copy`
 output carries "hand to a native Indonesian reader before publishing".
 
 ## Results
 
-Same model, with vs without the skill — blind persona readers:
+Same model both arms — the only difference is the skill. Fresh persona
+judges, blind to labels, orders randomized, forced picks, no reruns.
+Scores first, then taste the text: every skill has a before/after
+exhibit in [`eval/before-after/`](eval/before-after) quoting the real
+outputs. (n=2 per skill — directional, not statistics.)
 
-| Sample | Without skill | With skill | Blind pick |
-|---|---|---|---|
-| WA promo (gen-1) | trusted ✗ · would_act ✗ | ✓ · ✓ | skill version |
-| IG caption (gen-2) | trusted ✗ · would_act ✗ | ✓ · ✓ | skill version |
+The judges are LLM persona agents — fresh agents, same base model,
+playing the persona — not human readers. Treat every score as evidence
+about the text, not human-preference research.
 
-Wild rewrites: 4 of 5 samples flipped every verdict; one honest failure
-kept (wild-3). Full outputs, uncropped:
-[`eval/verdicts/ab-arms.md`](eval/verdicts/ab-arms.md) ·
-[`eval/verdicts/results.md`](eval/verdicts/results.md). n=2, blind,
-order-randomized — directional, not statistics.
+### id-copy · 2/2
 
-Expansion skills (2026-10-31, loop 5): **4/8 skill-arm picks** across
-four two-sample A/Bs — id-social 2/2, id-translate 1/2, id-longform
-1/2, id-humanizer 0/2 (kept; both its losses produced the skill's
-closing-formula fix the same day). Same protocol, same honesty rules:
-[`eval/verdicts/translate-ab.md`](eval/verdicts/translate-ab.md) ·
-[`humanize-ab.md`](eval/verdicts/humanize-ab.md) ·
-[`longform-ab.md`](eval/verdicts/longform-ab.md) ·
-[`social-ab.md`](eval/verdicts/social-ab.md).
+> **Without:** "Ada kabar baik buat hari ini: tas wanita premium
+> koleksi terbaru lagi diskon spesial! … siapa cepat dia dapat ya,
+> Kak!"
+>
+> **With:** "Lagi ada promo tas hari ini... kualitas premium tapi
+> harganya bikin kaget (yang enak). Stoknya beneran dikit, makanya
+> jangan lama-lama! … Mau langsung order atau lihat katalog dulu?"
+
+Blind wa-buyer on the first: *"the broadcast I delete… Nobody who
+ends a message like that has ever sent me a resi. Mute."* On the second:
+*"a question I can answer in three words…"* Wild rewrites flipped 4
+of 5 samples; the one that didn't is kept, failure and all.
+→ [`id-copy-before-after.md`](eval/before-after/id-copy-before-after.md)
+
+### id-translate · 1/2
+
+> **Without:** "Kunci API Anda ada di menu **Pengaturan → Kunci**" —
+> the English app's Settings → Keys, translated. Judge: *"You do not
+> translate UI labels; that is the one string I need to click…"*
+>
+> **With:** "*API key* kamu ada di **Settings → Keys**. Cukup set
+> sekali:" — clickable again, kamu register, parity ledger 7/7.
+
+The loss was the same rule from the opposite direction: the skill
+kept the English path in an Indonesian-localized app. One rule
+learned from both sides — UI paths follow the app's actual UI
+language (now structures.md #21).
+→ [`id-translate-before-after.md`](eval/before-after/id-translate-before-after.md)
+
+### id-longform · 1/2
+
+> **Without:** an Anda-addressed essay with semicolon punchlines.
+> Judge: *"I don't forward consultant-voiced think pieces to the team
+> channel."*
+>
+> **With:** "Jumat, jam 10.14. … Rp449.000. Padahal harga promo
+> Rp399.000 sudah berlaku sejak Kamis malam." Headings as assertions,
+> a "write this today" section. Judge: *"This is the one I paste into
+> the team channel."*
+
+The loss is the register lesson: a 48-year-old shop owner read the
+skill arm's kamu as junior — *"kalau sales datang ke toko saya pasti
+bilang 'Pak'."* Audience age now weighs on register.
+→ [`id-longform-before-after.md`](eval/before-after/id-longform-before-after.md)
+
+### id-humanizer · 0/2 — the loss that fixed the skill
+
+> **Input:** "…Demikian pengumuman ini kami sampaikan… atas perhatian
+> dan kerja sama para pengguna, kami ucapkan terima kasih."
+>
+> **The skill arm kept the formula.** Blind reader: *"saya seperti
+> membaca surat dari kantor kelurahan… penutup surat resmi yang
+> distempel, bukan yang diucapkan orang."*
+
+Both picks went to the no-skill arm. Root cause identical in both:
+formulaic closers mis-classified as voice. `voice.md` now rules
+**"Formulaic closers are tells, not voice."** The fix postdates the
+A/B — re-measuring takes new samples, per the no-rerun rule.
+→ [`id-humanizer-before-after.md`](eval/before-after/id-humanizer-before-after.md)
+
+### id-social · 2/2
+
+> **Without:** "Anak Jatim, stop scroll dulu." … "Tag temenmu yang
+> ngaku tahan pedes…" Judge: *"kayak page Facebook zaman 2021."*
+>
+> **With:** the crunch as the hook — "Balado level tiga, asli
+> Bondowoso" over a chip snapped at the lens — and a CTA answerable in
+> one word: "kamu tim level berapa?" Judge: *"itu bahasa TikTok, bukan
+> bahasa iklan… saya langsung ketik '3' di komen, nggak perlu mikir."*
+
+Both judges quoted the platform rules back. Dated slang was refused
+by the staleness rule.
+→ [`id-social-before-after.md`](eval/before-after/id-social-before-after.md)
+
+### id-reader · the judging half
+
+The verdict engine behind every result above: a persona reads once, in
+character, and names the exact line that lost them. On an AI-FAQ
+paste: *"suasananya seperti dosen ngajar… Tidak ada angka, tidak ada
+bukti…"* → after the rewrite, same persona: *"malam ini aku coba tanya
+menu seminggu."* Wild eval: 4 of 5 samples flipped; the miss is kept.
+→ [`id-reader-before-after.md`](eval/before-after/id-reader-before-after.md)
+
+### id-bench · the harness
+
+The discipline productized: blind judges, randomized recorded orders,
+forced picks, hesitation notes kept, all arms retained verbatim. Its
+demo receipt is this repo's own four-skill A/B run — **4/8** aggregate,
+every loss localized to a line and fixed the same day. One judge's
+recorded hesitation: *"Version 1 is the better argument and Version 2 is the
+better conversation, and I buy from conversations…"*
+→ [`id-bench-before-after.md`](eval/before-after/id-bench-before-after.md)
 
 ## Layout
 
@@ -88,7 +174,7 @@ id-longform/       articles + newsletters (angle · moves · ban-list)
 id-humanizer/      de-slop any Indonesian text (voice ledger)
 id-social/         tiktok · linkedin · facebook — one file per platform
 id-bench/          the blind A/B harness (protocol + id-reader personas)
-eval/              samples → rewrites → verdicts; re-runnable
+eval/              samples → rewrites → verdicts → before/after exhibits
 ```
 
 Components are one-concern files, loadable on demand. SKILL.md routers
@@ -109,11 +195,14 @@ update, never fork-edit.
 ## Status
 
 v1 candidate — built and evaluated 2026-10-31 by Bobby Heykal
-([timai.id](https://timai.id)) with agent tooling; the owner's native
-correction pass over personas, examples, and the repo's Indonesian prose
-(README.id.md included — machine-written) is part of finalizing v1 (the
-personas carry their banner until then). Slang ages: check
-`codeswitch.md` dates before trusting any slang-bearing line.
+([timai.id](https://timai.id)) with agent tooling. The native-check
+pass over personas, examples, and the repo's Indonesian prose runs as
+gauntlet loops, not a one-time blessing (loop 6, 2026-10-31: a
+native-lens critic panel over the personas and the loop-5 skill
+components, findings fixed — machine critics, not the owner's ear). Something read wrong to
+you? That's an issue or a PR; corrections land in the repo. Slang
+ages: check `codeswitch.md` dates before trusting any slang-bearing
+line.
 
 ## License
 

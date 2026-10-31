@@ -1,7 +1,8 @@
 # tiktok.md — TikTok Indonesia norms (id-social)
 
 `component: id-social` · Research-backed with DATES (sources at
-bottom); owner pass pending. **Structural staleness rule:** slang
+bottom); native-lens critic pass 2026-10-31 (gauntlet loop 6).
+**Structural staleness rule:** slang
 explainers are written months after a term peaks — at documentation
 time any term listed here is already 3–12 months past peak. Treat
 EVERY slang entry as `dated`, re-verify before use, and prefer

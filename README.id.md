@@ -2,8 +2,9 @@
 
 [Baca versi bahasa Inggris](README.md)
 
-Kumpulan skill agent untuk pasar Indonesia: copy yang terasa ditulis
-manusia, dinilai langsung oleh pembaca yang memang bakal melihatnya.
+Kumpulan skill agent untuk pasar Indonesia: copy yang terasa seperti
+ditulis manusia, dinilai langsung oleh pembaca yang memang bakal
+melihatnya.
 
 LLM global kalau menulis bahasa Indonesia aksennya gampang dikenali,
 sebut saja *bahasa Indonesia ala AI*: bahasa baku yang kaku seperti
@@ -15,28 +16,27 @@ dari dua sisi:
 - **`id-copy`** — menulis dan memperbaiki copy pemasaran bahasa
   Indonesia. Skill-nya mewajibkan kamu memilih register dan
   menyatakannya secara eksplisit sebelum mulai menulis. Draf lalu
-  diperiksa terhadap daftar tell yang terdokumentasi, mengikuti aturan
+  diperiksa dengan daftar tell yang terdokumentasi, mengikuti aturan
   code-switch (kata mana yang tetap bahasa Inggris — dicek ke KBBI atau
   diberi penanda sumbernya), plus norma tiap platform.
-- **`id-reader`** — berperan sebagai pembaca Indonesia tertentu
-  (pemburu diskon marketplace, pembaca LinkedIn kalangan startup,
+- **`id-reader`** — agent persona LLM berperan sebagai pembaca
+  Indonesia tertentu (pemburu diskon marketplace, pembaca LinkedIn kalangan startup,
   pembeli di grup WhatsApp), membaca copy-nya, lalu mengeluarkan verdict
   terstruktur. Pembaca menilai dari rasanya, bukan dari daftar tell —
   dua skill ini sengaja tidak memakai checklist yang sama (satu
-  penulis membangun keduanya, apa yang dicakup dan tidaknya dijelaskan
-  di catatan jujur soal A/B).
+  penulis membangun keduanya, apa yang dicakup dan apa yang tidak
+  dijelaskan di catatan jujur soal A/B).
 
 Skill ekspansi (2026-10-31 — empat di antaranya dengan A/B buta dua
-sampel, strukturnya di `eval/verdicts/`. Receipt `id-bench` adalah
-pemetaan demo di folder yang sama):
+sampel, catatan hasil lengkapnya di `eval/verdicts/`):
 
-- **`id-translate`** — EN→ID yang terasa ditulis asli dari nol: buku
+- **`id-translate`** — EN→ID yang terasa ditulis orisinal dari nol: buku
   paritas (klaim, angka, dan keraguan tidak boleh melenceng) plus bank
   transformasi pembunuh kalque dan struktur bahasa Inggris yang ikut
   kebawa.
 - **`id-longform`** — artikel dan newsletter: angle dinyatakan,
-  bagian-per-gerakan, lawan daftar larangan perancah AI yang
-  terdokumentasi.
+  tiap bagian satu gerakan, plus daftar larangan pola perancah AI
+  yang terdokumentasi.
 - **`id-humanizer`** — bersihkan teks Indonesia apa pun dari lapisan
   mesin tanpa menghapus penulisnya, tiap perubahan dicatat. Register
   dideteksi, bukan dipilih.
@@ -48,23 +48,23 @@ pemetaan demo di folder yang sama):
 
 ## Kenapa layak dipercaya
 
-Setiap contoh dan aturan menyertakan sumbernya — entri KBBI yang dicek
-langsung, kampanye brand yang nyata, kumpulan template yang
-terdokumentasi, status slang beserta tanggalnya. Yang memang tidak ada sumbernya
-ditandai apa adanya (`pattern-level`, `[inf]`).
-
-Repo ini juga menyertakan **`eval/`**: sampel "bahasa Indonesia ala
-AI", sebagian dikumpulkan dari lapangan, sebagian dibuat ulang dengan
-prompt yang bisa direproduksi. Sampel-sampel itu ditulis ulang
-memakai `id-copy`. Persona lalu membaca versi awal dan versi barunya,
-memberi verdict untuk keduanya — termasuk satu kegagalan jujur yang
-sengaja dipertahankan. Ada pula uji A/B buta: model yang sama menulis
-ulang sampel uji (sampel yang tidak disentuh saat skill dibangun),
-sekali dengan skill, sekali tanpa skill. Pembaca persona tidak
-diberi tahu versi mana hasil skill, dan urutan bacaannya diacak.
-Hasilnya: dua dari dua pembaca memilih versi hasil skill
-([`eval/verdicts/ab-test.md`](eval/verdicts/ab-test.md)). Ingin
-mencoba sendiri? Resepnya ada di [`eval/run.md`](eval/run.md).
+- **Sumbernya ikut terbawa** — entri KBBI yang dicek langsung,
+  kampanye brand yang nyata, kumpulan template yang terdokumentasi,
+  status slang beserta tanggalnya. Yang tidak bersumber ditandai apa
+  adanya (`pattern-level` = pola hasil observasi, `[inf]` = inferensi),
+  tidak pernah diam-diam.
+- **`eval/` ikut dikirim** — sampel "bahasa Indonesia ala AI", sebagian
+  dari lapangan, sebagian dibuat ulang dengan prompt yang bisa
+  direproduksi. Sampel-sampel itu ditulis ulang memakai `id-copy`, lalu
+  dibaca ulang oleh persona sebelum dan sesudahnya — termasuk satu
+  kegagalan jujur yang sengaja dipertahankan.
+- **A/B buta** — model yang sama menulis ulang sampel uji (sampel yang
+  tidak disentuh saat skill dibangun), sekali dengan skill, sekali
+  tanpa skill. Pembaca persona tidak diberi tahu versi mana hasil
+  skill, dan urutan bacaannya diacak. Hasilnya: dua dari dua pembaca
+  memilih versi hasil skill
+  ([`eval/verdicts/ab-test.md`](eval/verdicts/ab-test.md)). Ingin
+  mencoba sendiri? Resepnya ada di [`eval/run.md`](eval/run.md).
 
 Dua skill ini membuat hasil copy makin tajam. Keduanya bukan pengganti
 telinga penutur asli — setiap output `id-copy` menyertakan pengingat:
@@ -72,28 +72,120 @@ serahkan dulu dibaca penutur asli sebelum dipublikasikan.
 
 ## Hasil
 
-Model yang sama, dengan vs tanpa skill — pembaca persona buta:
+Model yang sama di kedua lengan — satu-satunya beda: pakai skill atau
+tidak. Hakim persona baru, buta label, urutan diacak, wajib memilih,
+tanpa rerun. Skor dulu, baru rasakan teksnya: tiap skill punya berkas
+before/after di [`eval/before-after/`](eval/before-after) yang
+mengutip keluaran aslinya. (n=2 per skill — ini sekadar petunjuk arah,
+bukan statistik.)
 
-| Sampel | Tanpa skill | Dengan skill | Pilihan pembaca buta |
-|---|---|---|---|
-| Promosi WA (gen-1) | trusted ✗ · would_act ✗ | ✓ · ✓ | versi skill |
-| Caption IG (gen-2) | trusted ✗ · would_act ✗ | ✓ · ✓ | versi skill |
+Para hakimnya adalah agent persona LLM — agent baru, model dasar yang
+sama, memerankan personanya — bukan pembaca manusia. Anggap setiap
+skor sebagai bukti soal teksnya, bukan riset preferensi manusia.
 
-Sampel liar: 4 dari 5 flip semua verdict setelah ditulis ulang, satu
-kegagalan jujur dipertahankan (wild-3). Output lengkap tanpa potongan di
-[`eval/verdicts/ab-arms.md`](eval/verdicts/ab-arms.md) ·
-[`eval/verdicts/results.md`](eval/verdicts/results.md). n=2, buta,
-urutan diacak — ini arah, bukan statistik.
+### id-copy · 2/2
 
-Skill ekspansi (2026-10-31, loop 5): **4 dari 8** pilihan pembaca jatuh
-ke versi skill, dari empat A/B dua sampel — id-social 2/2, id-translate
-1/2, id-longform 1/2, id-humanizer 0/2 (dipertahankan — dua
-kekalahannya justru menghasilkan perbaikan aturan penutup formula di
-hari yang sama). Protokol dan aturan kejujurannya sama:
-[`eval/verdicts/translate-ab.md`](eval/verdicts/translate-ab.md) ·
-[`humanize-ab.md`](eval/verdicts/humanize-ab.md) ·
-[`longform-ab.md`](eval/verdicts/longform-ab.md) ·
-[`social-ab.md`](eval/verdicts/social-ab.md).
+> **Tanpa skill:** "Ada kabar baik buat hari ini: tas wanita premium
+> koleksi terbaru lagi diskon spesial! … siapa cepat dia dapat ya,
+> Kak!"
+>
+> **Dengan skill:** "Lagi ada promo tas hari ini... kualitas premium
+> tapi harganya bikin kaget (yang enak). Stoknya beneran dikit, makanya
+> jangan lama-lama! … Mau langsung order atau lihat katalog dulu?"
+
+Hakim buta (wa-buyer) soal versi pertama: *"the broadcast I delete…
+Nobody who ends a message like that has ever sent me a resi. Mute."* Soal
+versi kedua: *"a question I can answer in three words…"* Empat dari
+lima sampel liar berubah total setelah ditulis ulang, satu kegagalan
+dipertahankan apa adanya.
+→ [`id-copy-before-after.md`](eval/before-after/id-copy-before-after.md)
+
+### id-translate · 1/2
+
+> **Tanpa skill:** "Kunci API Anda ada di menu **Pengaturan →
+> Kunci**" — jalur menu di aplikasi berbahasa Inggris ikut
+> diterjemahkan. Kata hakim: *"You do not translate UI labels; that is
+> the one string I need to click…"*
+>
+> **Dengan skill:** "*API key* kamu ada di **Settings → Keys**. Cukup
+> set sekali:" — jalur menunya tetap bisa diklik, register kamu, buku
+> paritas 7/7.
+
+Kekalahannya aturan yang sama dari arah sebaliknya: skill
+mempertahankan jalur Inggris di aplikasi yang tampilannya bahasa
+Indonesia. Satu pelajaran dari dua sisi — jalur UI mengikuti bahasa
+tampilan aplikasi milik pembacanya (kini structures.md #21).
+→ [`id-translate-before-after.md`](eval/before-after/id-translate-before-after.md)
+
+### id-longform · 1/2
+
+> **Tanpa skill:** esai — sapaan "Anda" dari awal sampai akhir,
+> titik koma dramatis di mana-mana. Kata hakim: *"I don't forward
+> consultant-voiced think pieces to the team channel."*
+>
+> **Dengan skill:** "Jumat, jam 10.14. … Rp449.000. Padahal harga
+> promo Rp399.000 sudah berlaku sejak Kamis malam." Judul bagian
+> berupa pernyataan, ada bagian "Yang bisa kamu tulis hari ini". Kata
+> hakim: *"This is the one I paste into the team channel."*
+
+Kekalahannya pelajaran register: pembaca toko berusia 48 tahun membaca
+"kamu" di versi skill sebagai sapaan anak muda — *"kalau sales datang
+ke toko saya pasti bilang 'Pak'."* Usia audiens kini ikut menentukan
+pilihan register.
+→ [`id-longform-before-after.md`](eval/before-after/id-longform-before-after.md)
+
+### id-humanizer · 0/2 — kekalahan yang memperbaiki skill-nya
+
+> **Masukan:** "…Demikian pengumuman ini kami sampaikan… atas
+> perhatian dan kerja sama para pengguna, kami ucapkan terima kasih."
+>
+> **Lengan skill mempertahankan formulanya.** Kata pembaca buta: *"saya
+> seperti membaca surat dari kantor kelurahan… penutup surat resmi
+> yang distempel, bukan yang diucapkan orang."*
+
+Kedua sampel dimenangkan lengan tanpa skill. Akarnya sama: penutup
+formula salah dikira sebagai voice penulis, padahal tell. Kini
+`voice.md` memutus **"Formulaic closers are tells, not voice."**
+Perbaikan ini lahir setelah A/B-nya selesai — mengukur ulang butuh
+sampel baru, sesuai aturan tanpa-rerun.
+→ [`id-humanizer-before-after.md`](eval/before-after/id-humanizer-before-after.md)
+
+### id-social · 2/2
+
+> **Tanpa skill:** "Anak Jatim, stop scroll dulu." … "Tag temenmu yang
+> ngaku tahan pedes…" Kata hakim: *"kayak page Facebook zaman 2021."*
+>
+> **Dengan skill:** kriuknya jadi pembuka — "Balado level tiga, asli
+> Bondowoso" di atas keripik yang dipatahkan tepat di depan lensa —
+> dan CTA yang bisa dijawab satu kata: "kamu tim level berapa?" Kata
+> hakim: *"itu bahasa TikTok, bukan bahasa iklan… saya langsung ketik
+> '3' di komen, nggak perlu mikir."*
+
+Kedua hakim mengutip balik aturan platformnya. Slang bertanggal
+ditolak oleh aturan staleness.
+→ [`id-social-before-after.md`](eval/before-after/id-social-before-after.md)
+
+### id-reader · pihak yang menilai
+
+Mesin verdict di balik semua hasil di atas: seorang persona membaca
+satu kali sesuai perannya lalu menunjuk baris persis yang membuatnya
+berhenti. Pada tempelan FAQ AI: *"suasananya seperti dosen ngajar…
+Tidak ada angka, tidak ada bukti…"* → setelah ditulis ulang, persona
+yang sama: *"malam ini aku coba tanya menu seminggu."* Evaluasi sampel
+liar: 4 dari 5 berubah total, satu kegagalan dipertahankan.
+→ [`id-reader-before-after.md`](eval/before-after/id-reader-before-after.md)
+
+### id-bench · alat ujinya
+
+Disiplinnya dijadikan produk: hakim buta, urutan diacak dan dicatat,
+wajib memilih, catatan keraguan dipertahankan, semua lengan disimpan
+apa adanya. Bukti demonya adalah evaluasi empat skill di repo ini
+sendiri — agregat **4/8**, tiap kekalahan dilacak sampai ke baris
+penyebabnya lalu diperbaiki di hari yang sama. Satu keraguan hakim
+yang terekam: *"Version
+1 is the better argument and Version 2 is the better conversation,
+and I buy from conversations…"*
+→ [`id-bench-before-after.md`](eval/before-after/id-bench-before-after.md)
 
 ## Struktur
 
@@ -106,7 +198,7 @@ id-longform/       artikel + newsletter (angle · gerakan · daftar larangan)
 id-humanizer/      bersihkan teks Indonesia apa pun (buku gaya penulis)
 id-social/         tiktok · linkedin · facebook, satu file per platform
 id-bench/          alat uji A/B buta (protokol + persona id-reader)
-eval/              sampel → rewrite → verdict, bisa diulang sendiri
+eval/              sampel → rewrite → verdict → before/after
 ```
 
 Setiap komponen menangani satu topik dalam satu file, dimuat hanya
@@ -130,12 +222,16 @@ jangan menyunting salinannya sampai bercabang.
 ## Status
 
 Kandidat v1 — dibangun dan dievaluasi 2026-10-31 oleh Bobby Heykal
-([timai.id](https://timai.id)) dengan bantuan agent. Sebelum v1
-difinalkan, pemilik repo (penutur asli) masih akan mengoreksi
-persona, contoh, dan seluruh teks bahasa Indonesia di repo ini —
-termasuk README yang sedang kamu baca (itu tulisan mesin). Karena itu
-file persona masih menampilkan banner. Slang cepat basi: cek tanggal
-di `codeswitch.md` sebelum memakai baris yang mengandung slang.
+([timai.id](https://timai.id)) dengan bantuan agent. Pemeriksaan ala
+penutur asli untuk persona, contoh, dan seluruh teks Indonesia di repo
+ini berjalan lewat siklus gauntlet, bukan satu kali restu (loop 6,
+2026-10-31: panel kritikus berperan sebagai telinga penutur asli,
+memeriksa semua persona dan komponen skill loop-5, temuannya langsung
+diperbaiki — tetap
+telinga mesin, bukan telinga pemilik repo). Ada yang terasa janggal
+buat kamu? Buat issue atau PR, koreksinya masuk langsung ke repo. Slang
+cepat basi: cek tanggal di `codeswitch.md` sebelum memakai baris yang
+mengandung slang.
 
 ## Lisensi
 

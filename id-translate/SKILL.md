@@ -24,7 +24,8 @@ gloss serves bilingual readers and keeps Indonesian in context.
    strength, numbers, links, hedges, quantifiers, disclosures.
    *Indonesian:* Sebelum menulis, catat dulu buku paritasnya: semua
    klaim beserta kekuatannya, angka, tautan, keraguan, kata "semua",
-   pengungkapan. Tidak boleh ada yang hilang atau berubah kuat nanti.
+   pengungkapan. Tidak boleh ada yang hilang atau berubah kekuatannya
+   nanti.
 3. **REWRITE** — draft as original Indonesian informed by the ledger,
    applying [`references/structures.md`](references/structures.md).
    Never sentence-mapped. Stay-English words per

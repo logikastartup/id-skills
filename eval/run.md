@@ -2,7 +2,8 @@
 
 The skill ships with receipts: real cheesy-AI-Indonesian samples, rewritten
 through `id-copy`, judged before/after by `id-reader` personas — plus a
-blind A/B against the same model without the skill.
+blind A/B against the same model without the skill. Per-skill before/after
+exhibits — quoted pairs with the honest scores — live in `before-after/`.
 
 ## Per-skill evals (expansion skills, loop 5)
 

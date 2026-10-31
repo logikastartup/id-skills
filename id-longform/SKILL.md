@@ -23,7 +23,7 @@ a one-line Indonesian gloss (English line = the rule).
    default for "consumer".
    *Indonesian:* Tentukan jenis tulisannya, pembacanya, tujuannya — dan
    kalau penulisnya punya tulisan lain, simpan contoh gayanya. Umur dan
-   kedudukan pembaca menimbang register: pembaca 35+ (pemilik toko,
+   kedudukan pembaca ikut menentukan register: pembaca 35+ (pemilik toko,
    profesional) bisa membaca santai-kamu sebagai kurang hormat —
    semi-formal Anda/Bapak-Ibu adalah kehangatan, bukan kekakuan.
 2. **ANGLE** — state the ONE thing this piece argues or reveals, and

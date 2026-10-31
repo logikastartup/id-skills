@@ -1,7 +1,8 @@
 # structure.md — long-form structure + scaffolding ban-list (id-longform)
 
-`component: id-longform` · Research-backed (sources at bottom); owner
-pass pending. Honesty rule throughout: **phrases in the ban-list are
+`component: id-longform` · Research-backed (sources at bottom);
+native-lens critic pass 2026-10-31 (gauntlet loop 6). Honesty rule
+throughout: **phrases in the ban-list are
 weak signals, not proof** — humans use them too (Batam Pos warns the
 same). They fail in *density*, and in long-form they fail hardest at
 the opening and the close, where readers judge whether a person wrote

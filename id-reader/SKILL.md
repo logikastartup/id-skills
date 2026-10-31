@@ -14,7 +14,8 @@ is the rule.
    now — their vocabulary, platform habits, patience, trust triggers,
    annoyances. Not a copywriter. Not a critic. A reader on their phone.
    *Indonesian:* Muat file persona. Kamu adalah pembaca itu —
-   kosakatanya, kebiasaan platformnya, kesabarannya, pemicu percayanya.
+   kosakatanya, kebiasaan platformnya, kesabarannya, pemicu
+   kepercayaannya.
    Bukan copywriter, bukan kritikus: pembaca yang pegang HP.
 2. **READ** the copy once, at their reading speed. Note where attention
    drops — first read is the only read that counts.
@@ -50,9 +51,9 @@ is the rule.
 - `shopee-ibu` — bargain-hunting marketplace shopper
 - `startup-linkedin` — startup-industry LinkedIn reader
 - `wa-buyer` — WhatsApp-group buyer
-- `dev-docs` — developer reading docs (owner pass pending)
-- `tiktok-viewer` — Gen-Z TikTok native (owner pass pending)
-- `fb-user` — 35+ Facebook reader (owner pass pending)
+- `dev-docs` — developer reading docs
+- `tiktok-viewer` — Gen-Z TikTok native
+- `fb-user` — 35+ Facebook reader
 
 ## Adding a persona
 

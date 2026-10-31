@@ -51,7 +51,7 @@ scene. Specificity of detail ≠ specificity of person.
 - wild-3: before — "three posts wearing the exact same cardboard opener…
   screenshot-mock material." After (openers) — staged-scene finding (above);
   no variant recovered the openers, and that stands as the v1 limit.
-- wild-4: before — "suasananya seperti dosen ngajar… tidak ada harga, tidak
+- wild-4: before — "suasananya seperti dosen ngajar… Tidak ada angka, tidak
   ada bukti… cukup menggeser ke atas lagi." After — "malam ini aku coba
   tanya menu seminggu"; the honesty caveat ("jawabannya kadang salah…")
   compared to "seller yang jujur bilang warna bisa beda dikit sama foto".

@@ -1,7 +1,8 @@
 # facebook.md — Facebook Indonesia norms (id-social)
 
-`component: id-social` · Research-backed (sources at bottom); owner
-pass pending. Facebook is the platform where demographic clichés die
+`component: id-social` · Research-backed (sources at bottom);
+native-lens critic pass 2026-10-31 (gauntlet loop 6). Facebook is the
+platform where demographic clichés die
 hardest — the data below is the defensible version.
 
 ## Who is actually there (cite sources when quoting numbers)
@@ -54,4 +55,4 @@ hardest — the data below is the defensible version.
   platforms) · SIMPATI V1N2 (2023-04-26, DOI 10.59024/simpati.v1i2.159)
   FB informal register · mydropai.com caption limits (EN, medium) ·
   marketplace style + cross-platform consensus: unverified URLs,
-  owner pass applies.
+  flagged rather than trusted.

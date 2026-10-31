@@ -1,7 +1,7 @@
 # voice.md — the voice ledger + editing backbone (id-humanizer)
 
-`component: id-humanizer` · Editing doctrine cited at bottom; owner
-pass pending.
+`component: id-humanizer` · Editing doctrine cited at bottom;
+native-lens critic pass 2026-10-31 (gauntlet loop 6).
 
 The voice ledger is what makes humanizing different from homogenizing.
 You are not making the text sound like a generic human — you are making

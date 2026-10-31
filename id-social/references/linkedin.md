@@ -2,7 +2,8 @@
 
 `component: id-social` · ⚠️ **Documented evidence gap:** no citable
 Indonesian-LinkedIn post-length/structure/hashtag norms were found —
-the craft guidance below is pattern-level pending owner pass. What IS
+the craft guidance below is pattern-level (native-lens critic pass
+2026-10-31, gauntlet loop 6). What IS
 documented is cited.
 
 ## Register

@@ -2,7 +2,8 @@
 
 `component: id-translate` · Entries carry their evidence:
 `[receipt]` = caught live in this repo's loop 4 (gauntlet-progress.md);
-`[pattern]` = pattern-level, awaiting the owner's native pass — treat as
+`[pattern]` = pattern-level — machine-passed (gauntlet loop 6), a human
+native ear still welcome — treat as
 strong default, verify before trusting blind; `[EYD/PUEBI …]` = cited
 inline to the official rule (see Sources); `[research: …]` = the
 research round's finding, with its unresolved status stated.
@@ -145,4 +146,5 @@ Never map silently: the choice is stated in INTAKE and in the tag.
   over "Ciptakan") — supports the register-mapping table.
 - Unresolved (encoded as such above): mengambil/membuat keputusan; the
   "di mana" calque's primary source; the email-opener's status.
-- Everything still awaits the owner's native pass.
+- Everything machine-passed in gauntlet loop 6; a human native ear
+  remains the final word before publishing.

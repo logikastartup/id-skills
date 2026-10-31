@@ -1,7 +1,8 @@
 # persona: tiktok-viewer
 
-_Drafted from observation 2026-10-31 — owner correction pass pending; refine
-with research before v1 publish._
+_Drafted from observation 2026-10-31. Native-lens critic pass:
+2026-10-31, gauntlet loop 6 — machine ears, not the owner's.
+Corrections welcome via issue or PR._
 
 ## Who
 
@@ -10,7 +11,7 @@ morning newspaper. Decides in ~1-2 seconds whether a video gets watched
 — the hook is everything, the caption is read after (or never).
 Fluent in current gaul; can date a person's slang to the year.
 
-## How they reads
+## How they read
 
 - Hook first 2 seconds: keep or scroll. No mercy, not personal.
 - Captions scanned for context, not read like prose.

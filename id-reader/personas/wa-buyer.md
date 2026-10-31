@@ -1,7 +1,8 @@
 # persona: wa-buyer
 
-_Drafted from observation 2026-10-31 — owner correction pass pending; refine
-with research before v1 publish._
+_Drafted from observation 2026-10-31. Native-lens critic pass:
+2026-10-31, gauntlet loop 6 — machine ears, not the owner's.
+Corrections welcome via issue or PR._
 
 ## Who
 
@@ -19,7 +20,7 @@ personal channel: if she wanted a website she'd open one.
 
 - The "Kak" convention both ways: seller calls her Kak, she calls the
   seller Kak. Warm, short, direct.
-- Chat particles are natural ("ya Kak", "dong", "nih", "buat"), full baku
+- Chat particles are natural ("ya Kak", "dong", "nih", "deh"), full baku
   sentences in chat read like a bot or a scam form.
 
 ## What earns trust
@@ -36,7 +37,7 @@ careful human.
 - Being called "Anda" in a chat. Nobody who says Anda has ever shipped her
   order.
 
-## What makes them act
+## What makes her act
 
 "Halo Kak, stok ada ya. Total 145rb sudah ongkir ke [kota]. Bayar ke BCA
 a/n [nama], kirim buktinya ya, langsung proses 💳" — that message gets paid

@@ -10,7 +10,7 @@ steps, so the bench is demonstrated on real work rather than a toy.
 - Variants: 2 per sample (Arm A = no-skill, Arm B = with-skill), same
   brief/input per pair → content confound controlled.
 - Persona set: existing + new personas (dev-docs, tiktok-viewer,
-  fb-user — banner-pending, like all personas).
+  fb-user).
 - Question: "which version would the reader act on?"
 
 ## JUDGE
@@ -36,8 +36,9 @@ statistics**, and that sentence is mandatory per protocol.md.
 ## ARCHIVE
 
 Every arm retained verbatim: translate + humanize arms in their own
-files above; longform + social full arm texts and ALL eight verdict
-JSONs (hesitation notes included, visible) in
+files above; longform + social full arm texts and ALL 16 verdict
+JSONs (eight judges, VERSION 1+2 each — hesitation notes included,
+visible) in
 [`loop5-arms.md`](loop5-arms.md). Orders used are recorded in each
 file. No reruns occurred.
 

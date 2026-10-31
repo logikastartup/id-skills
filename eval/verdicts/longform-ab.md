@@ -86,5 +86,5 @@ santai-kamu" to a 35+ merchant audience who read kamu as junior.
 Encoded into SKILL.md INTAKE: audience age/status weighs on register;
 respectful semi-formal (Anda/Bapak-Ibu) is warmth for older merchant/
 professional readers. Also noted as a candidate register.md ladder
-amendment for the owner pass. A/B stands as run; re-measuring needs
-new samples.
+amendment (open — land it via an issue or PR). A/B stands as run;
+re-measuring needs new samples.
