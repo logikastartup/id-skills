@@ -1,10 +1,10 @@
 # id-longform — before / after
 
-The claim: **1/2** — a win where the audience matched, and a close
-forced-pick loss where it didn't (the judge's hesitation is retained
-verbatim in the record). The loss is now a rule in the skill. Sample
-longform-1: an 800–1000-word dev blog on quality gates for AI agents,
-same model both arms.
+The claim: **4/5 across two rounds** (loop 5: 1/2 — a close forced-pick
+loss with the judge's hesitation retained, which became the
+audience-age register rule; loop 7: 3/3, with that rule visibly
+working — see the end). Sample longform-1: an 800–1000-word dev blog
+on quality gates for AI agents, same model both arms.
 
 ## Before (no skill)
 
@@ -53,8 +53,15 @@ menjanjikan rak Anda tidak akan pernah kosong lagi"*) won the pick.
 Encoded into SKILL.md INTAKE: **audience age/status weighs on
 register.**
 
-n=2 · directional. Full verbatim texts of all four pieces + JSONs:
-[`eval/verdicts/loop5-arms.md`](../verdicts/loop5-arms.md) · record:
+**Loop 7 measured the fix.** The same setup (B2B newsletter to pemilik
+warung, judge fb-user) ran again with the rule in place: the skill arm
+wrote Anda-led and won — the judge: *"saya percaya Dimas yang cerita
+tentang warung Ibunya… sedangkan [no-skill arm] kedengaran seperti
+sales muda yang memanggil saya 'kamu'."* The loop-5 loss became a
+loop-7 win via one rule.
+
+n=5 across two rounds · directional. Full verbatim texts + JSONs,
+both rounds: [`loop5-arms.md`](../verdicts/loop5-arms.md) ·
+[`loop7-arms.md`](../verdicts/loop7-arms.md) · record:
 [`longform-ab.md`](../verdicts/longform-ab.md) · briefs:
-[`longform-1.md`](../samples/longform-1.md),
-[`longform-2.md`](../samples/longform-2.md)
+[`longform-1.md`](../samples/longform-1.md)–[`longform-5.md`](../samples/longform-5.md)

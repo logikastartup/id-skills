@@ -53,3 +53,19 @@ file. No reruns occurred.
   skill files the same day).
 - One-builder disclosure: repeated here — one builder authored
   samples, personas, skill files, and both arm prompts.
+
+## Loop-7 addendum (same date, second bench round)
+
+The loop-7 sample expansion ran 15 more A/Bs under this same protocol
+(3 new samples × 5 skills, fresh judges, orders recorded):
+id-copy 3/3, id-translate 2/3, id-humanizer 3/3, id-longform 3/3,
+id-social 2/3 → **13/15**. All-time aggregate across loops 3+5+7:
+**19/25 skill-arm picks by 25 fresh blind judges.** Losses kept:
+translate-4 (the UI-path rule's documented per-reader cost — no new
+rule) and social-3 (CTA-reason rule, encoded into tiktok.md
+same-day). The same round also ran the protocol's first
+non-skill-vs-baseline comparison — the instruction-language A/B
+(English-guided vs Indonesian-guided id-copy, n=3, Indonesian-guided
+3/3) — recorded in [`instrlang-ab.md`](instrlang-ab.md); all arms
+retained verbatim in [`loop7-arms.md`](loop7-arms.md). No reruns
+occurred in either round.

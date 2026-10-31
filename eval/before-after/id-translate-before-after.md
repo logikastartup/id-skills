@@ -1,8 +1,9 @@
 # id-translate — before / after
 
-The claim: **1/2** — one win, one loss, and both turned on the same
-rule from opposite directions. Sample translate-1: a "Getting started"
-docs section, EN → ID, same model both arms.
+The claim: **3/5 across two rounds** (loop 5: 1/2 — the loss became
+the UI-path rule below; loop 7: 2/3, the new loss is the same rule's
+known per-reader cost). Sample translate-1: a "Getting started" docs
+section, EN → ID, same model both arms.
 
 ## Before (no skill)
 
@@ -40,9 +41,13 @@ jadi saya bingung ini menu yang mana…"* She picked the no-skill arm.
 
 Same rule, opposite directions: **UI paths must match the app's actual
 UI language** — which differs per reader. Encoded as structures.md #21
-+ a ledger rule. The A/B stands as run; re-measuring needs new samples (no-rerun rule).
++ a ledger rule. The A/B stands as run; re-measuring needs new samples (no-rerun rule). Loop 7 added three samples (changelog docs,
+merchant payout email, logistics blog): 2/3 skill picks — the
+payout-email loss was this same rule in its trade-off form (the skill
+kept "Help Center" English per the unverified-UI rule; the merchant
+reader's app and preference are Indonesian — "Pusat Bantuan" won her).
 
-n=2 · directional. Full arms + all four JSONs:
-[`eval/verdicts/translate-ab.md`](../verdicts/translate-ab.md) ·
-inputs: [`translate-1.md`](../samples/translate-1.md),
-[`translate-2.md`](../samples/translate-2.md)
+n=5 across two rounds · directional. Full arms + JSONs both rounds:
+[`translate-ab.md`](../verdicts/translate-ab.md) ·
+[`loop7-arms.md`](../verdicts/loop7-arms.md) · inputs:
+[`translate-1.md`](../samples/translate-1.md)–[`translate-5.md`](../samples/translate-5.md)

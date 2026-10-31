@@ -57,6 +57,13 @@ entries 2025–2026) — check it before using any slang.
   viewer *enjoys answering* ("setuju gak?", "mana nih yang...") is the
   platform's native idiom. The difference is whether answering costs
   the viewer anything.
+  ⚠️ **[eval — loop 7, social-3]:** a one-word-answer question still
+  loses to a question WITH ITS REASON STATED — the losing skill arm
+  asked "outfit nomor berapa yang kamu mau?" bare, while the winner
+  spelled out what answering gets the viewer ("aku balas satu-satu…
+  nanti aku kasih tau masih ada atau nggak" — a stock check the viewer
+  actually needs). Rule: **the CTA must say what answering gets the
+  viewer**, not just be cheap to answer.
 
 ## Sources
 

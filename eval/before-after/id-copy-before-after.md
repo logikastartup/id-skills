@@ -1,9 +1,10 @@
 # id-copy — before / after
 
 The claim: same model, with the skill vs without, blind persona
-readers — **2/2 picks for the skill arm**, every verdict dimension
-flipped. Below is sample gen-1 in full voice. Quotes are verbatim
-(elided with …, never reworded).
+readers — **5/5 skill-arm picks across two rounds** (loop 3: 2/2;
+loop 7: 3/3 on WA promo, IG caption, marketplace listing). Quotes are
+verbatim (elided with …, never reworded). Below is sample gen-1 in
+full voice.
 
 ## Before (no skill)
 
@@ -50,8 +51,11 @@ aku beneran bakal tap bio-nya."* Wild-caught samples: 4 of 5 flipped
 every verdict; the one that didn't (wild-3) is kept as the repo's
 honest failure.
 
-n=2 · directional, not statistics · no reruns. Full arms + all four
-JSONs: [`eval/verdicts/ab-arms.md`](../verdicts/ab-arms.md) · A/B
-record: [`ab-test.md`](../verdicts/ab-test.md) · inputs:
+n=5 across two rounds (loop 3: gen-1/2; loop 7: copy-3/4/5) ·
+directional, not statistics · no reruns. Full arms + JSONs:
+[`ab-arms.md`](../verdicts/ab-arms.md) ·
+[`loop7-arms.md`](../verdicts/loop7-arms.md) · A/B records:
+[`ab-test.md`](../verdicts/ab-test.md) · inputs:
 [`gen-1-wa-promo.md`](../samples/gen-1-wa-promo.md),
-[`gen-2-ig-coffee.md`](../samples/gen-2-ig-coffee.md)
+[`gen-2-ig-coffee.md`](../samples/gen-2-ig-coffee.md),
+[`copy-3.md`](../samples/copy-3.md)–[`copy-5.md`](../samples/copy-5.md)

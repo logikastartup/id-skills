@@ -2,10 +2,11 @@
 
 id-bench is this repo's evaluation discipline, productized: blind
 persona judges, randomized recorded orders, forced picks, hesitation
-notes kept visible, all arms retained verbatim. Its demo receipt is
-the loop-5 run itself — the four skill A/Bs recorded per its own
-protocol. **4/8** skill-arm picks, every loss localized to a line and
-fixed.
+notes kept visible, all arms retained verbatim. Its demo receipts are
+the repo's own eval rounds, run per its protocol. Aggregate across
+loops 3+5+7: **19/25** skill-arm picks by 25 fresh blind judges —
+every loss localized to a line and either fixed or recorded as a
+rule's known cost.
 
 ## Before (the usual way two texts get compared)
 
@@ -38,8 +39,14 @@ trace to a single UI-path line each, the humanizer losses to specific
 closing lines, the longform loss to one register decision. That
 localization is what turned losses into fixes instead of vibes.
 
-n=8 total picks, but per-skill n=2 — **directional, not statistics**
-(that sentence is mandatory in every bench report). Protocol:
+n=25 total picks across three rounds (loops 3, 5, 7 — per-skill n=5)
+— **directional, not statistics** (that sentence is mandatory in
+every bench report). Loop 7 also ran the bench's first
+non-skill-vs-baseline experiment through the same protocol: the
+instruction-language A/B (English-guided vs Indonesian-guided id-copy
+— Indonesian-guided 3/3; record:
+[`instrlang-ab.md`](../verdicts/instrlang-ab.md)). Protocol:
 [`id-bench/references/protocol.md`](../../id-bench/references/protocol.md) ·
 demo mapping: [`eval/verdicts/bench-demo.md`](../verdicts/bench-demo.md) ·
-all arms + all 16 JSONs: [`loop5-arms.md`](../verdicts/loop5-arms.md)
+all arms + all JSONs: [`loop5-arms.md`](../verdicts/loop5-arms.md) ·
+[`loop7-arms.md`](../verdicts/loop7-arms.md)

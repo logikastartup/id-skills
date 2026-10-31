@@ -1,9 +1,12 @@
 # id-humanizer — before / after
 
-The claim, stated plainly: **0/2**. Both blind picks went to the
-no-skill arm, and both losses pointed at the same defect, fixed in the
-skill the same day. This exhibit shows the loss, not a curated win —
-a humanizer must be judged on what it does to formula, not on vibes.
+The claim, stated plainly: **0/2 in loop 5 — then 3/3 in loop 7 after
+the fix.** Aggregate **3/5**, and the turnaround is the story: both
+loop-5 losses pointed at one defect, fixed the same day; loop 7's
+three fresh samples (CS broadcast, LinkedIn post, product update) all
+went to the skill arm. This exhibit shows the original loss, not a
+curated win — a humanizer must be judged on what it does to formula,
+not on vibes.
 
 ## Before (the input's machine layer)
 
@@ -44,11 +47,14 @@ diucapkan orang."* The no-skill arm cut the ceremony and won both samples' picks
 
 `voice.md` now says it outright: **"Formulaic closers are tells, not
 voice."** — default cut/compress, keep only for official surat dinas.
-The fix postdates the A/B (no reruns — re-measuring takes new
-samples), so read this as a loss with its root cause, not a
-vindication.
-
-n=2 · directional. Full arms + all four JSONs:
-[`eval/verdicts/humanize-ab.md`](../verdicts/humanize-ab.md) ·
-inputs: [`humanize-1.md`](../samples/humanize-1.md),
-[`humanize-2.md`](../samples/humanize-2.md)
+The fix postdates the loop-5 A/B (no reruns — re-measuring takes new
+samples) — so read the loop-5 half as a loss with its root cause, not
+a vindication. **Loop 7 supplied the new samples** (fix in place) and
+the skill arm swept 3/3: the WA reader *"[rasanya] kayak notifikasi
+kurir yang beneran… aku screenshot jadwalnya"*; the LinkedIn reader
+*"ini suara orang yang benar-benar ada di timeline saya… saya nggak
+merasa dimanipulasi untuk komen"*; the dev reader *"ini kayak changelog
+yang ditulis, bukan diterjemahkan."* Full arms + JSONs both rounds:
+[`humanize-ab.md`](../verdicts/humanize-ab.md) ·
+[`loop7-arms.md`](../verdicts/loop7-arms.md) · inputs:
+[`humanize-1.md`](../samples/humanize-1.md)–[`5.md`](../samples/humanize-5.md)

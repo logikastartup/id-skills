@@ -27,8 +27,8 @@ dari dua sisi:
   penulis membangun keduanya, apa yang dicakup dan apa yang tidak
   dijelaskan di catatan jujur soal A/B).
 
-Skill ekspansi (2026-10-31 — empat di antaranya dengan A/B buta dua
-sampel, catatan hasil lengkapnya di `eval/verdicts/`):
+Skill ekspansi (2026-10-31 — empat di antaranya dengan A/B buta lima
+sampel lintas loop 5+7, catatan hasil lengkapnya di `eval/verdicts/`):
 
 - **`id-translate`** — EN→ID yang terasa ditulis orisinal dari nol: buku
   paritas (klaim, angka, dan keraguan tidak boleh melenceng) plus bank
@@ -76,14 +76,14 @@ Model yang sama di kedua lengan — satu-satunya beda: pakai skill atau
 tidak. Hakim persona baru, buta label, urutan diacak, wajib memilih,
 tanpa rerun. Skor dulu, baru rasakan teksnya: tiap skill punya berkas
 before/after di [`eval/before-after/`](eval/before-after) yang
-mengutip keluaran aslinya. (n=2 per skill — ini sekadar petunjuk arah,
+mengutip keluaran aslinya. (n=5 per skill lintas ronde evaluasi — ini sekadar petunjuk arah,
 bukan statistik.)
 
 Para hakimnya adalah agent persona LLM — agent baru, model dasar yang
 sama, memerankan personanya — bukan pembaca manusia. Anggap setiap
 skor sebagai bukti soal teksnya, bukan riset preferensi manusia.
 
-### id-copy · 2/2
+### id-copy · 5/5
 
 > **Tanpa skill:** "Ada kabar baik buat hari ini: tas wanita premium
 > koleksi terbaru lagi diskon spesial! … siapa cepat dia dapat ya,
@@ -95,12 +95,11 @@ skor sebagai bukti soal teksnya, bukan riset preferensi manusia.
 
 Hakim buta (wa-buyer) soal versi pertama: *"the broadcast I delete…
 Nobody who ends a message like that has ever sent me a resi. Mute."* Soal
-versi kedua: *"a question I can answer in three words…"* Empat dari
-lima sampel liar berubah total setelah ditulis ulang, satu kegagalan
-dipertahankan apa adanya.
+versi kedua: *"a question I can answer in three words…"* Pada evaluasi sampel liar yang lebih awal, empat dari lima berubah
+total setelah ditulis ulang, satu kegagalan dipertahankan apa adanya.
 → [`id-copy-before-after.md`](eval/before-after/id-copy-before-after.md)
 
-### id-translate · 1/2
+### id-translate · 3/5
 
 > **Tanpa skill:** "Kunci API Anda ada di menu **Pengaturan →
 > Kunci**" — jalur menu di aplikasi berbahasa Inggris ikut
@@ -117,7 +116,7 @@ Indonesia. Satu pelajaran dari dua sisi — jalur UI mengikuti bahasa
 tampilan aplikasi milik pembacanya (kini structures.md #21).
 → [`id-translate-before-after.md`](eval/before-after/id-translate-before-after.md)
 
-### id-longform · 1/2
+### id-longform · 4/5
 
 > **Tanpa skill:** esai — sapaan "Anda" dari awal sampai akhir,
 > titik koma dramatis di mana-mana. Kata hakim: *"I don't forward
@@ -134,7 +133,7 @@ ke toko saya pasti bilang 'Pak'."* Usia audiens kini ikut menentukan
 pilihan register.
 → [`id-longform-before-after.md`](eval/before-after/id-longform-before-after.md)
 
-### id-humanizer · 0/2 — kekalahan yang memperbaiki skill-nya
+### id-humanizer · 3/5 — 0/2, diperbaiki, lalu 3/3
 
 > **Masukan:** "…Demikian pengumuman ini kami sampaikan… atas
 > perhatian dan kerja sama para pengguna, kami ucapkan terima kasih."
@@ -143,14 +142,15 @@ pilihan register.
 > seperti membaca surat dari kantor kelurahan… penutup surat resmi
 > yang distempel, bukan yang diucapkan orang."*
 
-Kedua sampel dimenangkan lengan tanpa skill. Akarnya sama: penutup
+Kedua sampel loop 5 dimenangkan lengan tanpa skill. Akarnya sama: penutup
 formula salah dikira sebagai voice penulis, padahal tell. Kini
 `voice.md` memutus **"Formulaic closers are tells, not voice."**
 Perbaikan ini lahir setelah A/B-nya selesai — mengukur ulang butuh
-sampel baru, sesuai aturan tanpa-rerun.
+sampel baru, sesuai aturan tanpa-rerun. Loop 7 membawa sampel
+barunya: **3/3 untuk lengan skill.** Perbaikinya, terukur.
 → [`id-humanizer-before-after.md`](eval/before-after/id-humanizer-before-after.md)
 
-### id-social · 2/2
+### id-social · 4/5
 
 > **Tanpa skill:** "Anak Jatim, stop scroll dulu." … "Tag temenmu yang
 > ngaku tahan pedes…" Kata hakim: *"kayak page Facebook zaman 2021."*
@@ -161,8 +161,10 @@ sampel baru, sesuai aturan tanpa-rerun.
 > hakim: *"itu bahasa TikTok, bukan bahasa iklan… saya langsung ketik
 > '3' di komen, nggak perlu mikir."*
 
-Kedua hakim mengutip balik aturan platformnya. Slang bertanggal
-ditolak oleh aturan staleness.
+Kedua hakim loop 5 mengutip balik aturan platformnya. Slang
+bertanggal ditolak oleh aturan staleness. Kekalahan TikTok di loop 7
+menghasilkan aturan alasan CTA (sebutkan apa yang didapat pembaca
+dari menjawab), masuk ke tiktok.md di hari yang sama.
 → [`id-social-before-after.md`](eval/before-after/id-social-before-after.md)
 
 ### id-reader · pihak yang menilai
@@ -175,13 +177,29 @@ yang sama: *"malam ini aku coba tanya menu seminggu."* Evaluasi sampel
 liar: 4 dari 5 berubah total, satu kegagalan dipertahankan.
 → [`id-reader-before-after.md`](eval/before-after/id-reader-before-after.md)
 
+### Eksperimen bahasa instruksi · versi Indonesia 3/3
+
+Pertanyaan yang membuka repo ini: kalau skill-nya ditulis dalam
+bahasa Indonesia, apakah bahasa Indonesianya ikut membaik? Loop 7
+membangun kembaran id-copy yang ditulis langsung dalam bahasa
+Indonesia (aturan dan sumber sama — bahasa instruksi menjadi satu-satunya variabelnya) lalu menguji buta melawan skill berbahasa
+Inggris. Versi Indonesia menang tiga dari tiga, dan risiko yang
+sudah dinamai (instruksi baku menular jadi output baku) tidak
+terjadi — hakim justru menyebut draf versi Indonesia lebih santai
+(kolokial) di register yang sama:
+*"'Garing' bukan 'renyah'… 'tombol Beli Sekarang' itu emang tombol
+yang ada di Shopee — gak nyasar."* n=3 — sekadar petunjuk arah. Kembarannya tetap artefak
+eksperimen sampai skill dan sampel lain mengatakan hal serupa.
+→ [`instrlang-ab.md`](eval/verdicts/instrlang-ab.md)
+
 ### id-bench · alat ujinya
 
 Disiplinnya dijadikan produk: hakim buta, urutan diacak dan dicatat,
 wajib memilih, catatan keraguan dipertahankan, semua lengan disimpan
-apa adanya. Bukti demonya adalah evaluasi empat skill di repo ini
-sendiri — agregat **4/8**, tiap kekalahan dilacak sampai ke baris
-penyebabnya lalu diperbaiki di hari yang sama. Satu keraguan hakim
+apa adanya. Bukti demonya adalah ronde evaluasi repo ini sendiri — agregat
+**19/25** lintas loop 3+5+7, tiap kekalahan dilacak sampai ke baris
+penyebabnya lalu diperbaiki di hari yang sama atau dicatat sebagai
+konsekuensi aturan yang memang sudah diketahui. Satu keraguan hakim
 yang terekam: *"Version
 1 is the better argument and Version 2 is the better conversation,
 and I buy from conversations…"*

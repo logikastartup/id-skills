@@ -10,8 +10,9 @@ exhibits — quoted pairs with the honest scores — live in `before-after/`.
 Same rules as above (fresh judges, blind VERSION 1/2 labels, per-sample
 randomization recorded, no-rerun, arms retained, co-evolution +
 authorship disclosed, n named). All judges emit the `id-reader` verdict
-JSON + a forced PICK. Each skill below: n=2 samples → results are
-**directional** by construction.
+JSON + a forced PICK. Loop 5 gave each expansion skill n=2; loop 7
+added 3 more samples per skill (n=5 total; id-copy n=5 via loops 3+7)
+→ results are **directional** by construction.
 
 | Skill | Inputs (samples/) | Arm A (no skill) | Arm B | Blind judges |
 |---|---|---|---|---|
@@ -19,7 +20,8 @@ JSON + a forced PICK. Each skill below: n=2 samples → results are
 | id-humanizer | `humanize-1.md`, `humanize-2.md` (stiff ID inputs) | "perbaiki agar terdengar lebih natural dan manusiawi" | loads `id-humanizer/SKILL.md` | fb-user (h-1) · dev-docs (h-2) |
 | id-longform | `longform-1.md`, `longform-2.md` (briefs) | "tulis dari brief ini" | loads `id-longform/SKILL.md` | dev-docs (lf-1) · fb-user (lf-2 — audience is pemilik toko) |
 | id-social | `social-1.md`, `social-2.md` (briefs) | plain write | loads `id-social/SKILL.md` + the one platform file | tiktok-viewer (s-1) · startup-linkedin (s-2) |
-| id-bench | demo = the four loop-5 A/Bs, recorded per its own protocol | — | — | (the run itself is the artifact: `verdicts/bench-demo.md`) |
+| id-bench | demo = the loop-5 + loop-7 A/B runs, recorded per its own protocol | — | — | (the runs themselves are the artifact: `verdicts/bench-demo.md`) |
+| instrlang (loop 7) | `copy-3.md`–`copy-5.md` (shared with id-copy's loop-7 run) | English-guided id-copy (full skill) | Indonesian-guided twin `eval/instrlang/id-copy-id/` (same rules, instruction language the only variable) | wa-buyer (c-3) · shopee-ibu (c-4/5) — **ID-guided 3/3**, see `verdicts/instrlang-ab.md` |
 
 Arm B's process/verification notes are stripped before judging — arms
 are compared on text alone. Records land in `verdicts/<skill>-ab.md`

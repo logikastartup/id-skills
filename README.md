@@ -21,8 +21,8 @@ attack it from two sides:
   against the tells list — the two skills share no checklist (one author
   built both; the A/B honesty notes say what that does and doesn't cover).
 
-Expansion skills (2026-10-31 — four with their own two-sample blind
-A/Bs, receipts in `eval/verdicts/`):
+Expansion skills (2026-10-31 — four with their own five-sample blind
+A/Bs across loops 5+7, receipts in `eval/verdicts/`):
 
 - **`id-translate`** — EN→ID translation that reads originally-written:
   a parity ledger (claims, numbers, hedges never drift) plus a
@@ -62,13 +62,13 @@ Same model both arms — the only difference is the skill. Fresh persona
 judges, blind to labels, orders randomized, forced picks, no reruns.
 Scores first, then taste the text: every skill has a before/after
 exhibit in [`eval/before-after/`](eval/before-after) quoting the real
-outputs. (n=2 per skill — directional, not statistics.)
+outputs. (n=5 per skill across eval rounds — directional, not statistics.)
 
 The judges are LLM persona agents — fresh agents, same base model,
 playing the persona — not human readers. Treat every score as evidence
 about the text, not human-preference research.
 
-### id-copy · 2/2
+### id-copy · 5/5
 
 > **Without:** "Ada kabar baik buat hari ini: tas wanita premium
 > koleksi terbaru lagi diskon spesial! … siapa cepat dia dapat ya,
@@ -80,11 +80,12 @@ about the text, not human-preference research.
 
 Blind wa-buyer on the first: *"the broadcast I delete… Nobody who
 ends a message like that has ever sent me a resi. Mute."* On the second:
-*"a question I can answer in three words…"* Wild rewrites flipped 4
-of 5 samples; the one that didn't is kept, failure and all.
+*"a question I can answer in three words…"* In the earlier
+wild-caught eval, 4 of 5 samples flipped; the one that didn't is
+kept, failure and all.
 → [`id-copy-before-after.md`](eval/before-after/id-copy-before-after.md)
 
-### id-translate · 1/2
+### id-translate · 3/5
 
 > **Without:** "Kunci API Anda ada di menu **Pengaturan → Kunci**" —
 > the English app's Settings → Keys, translated. Judge: *"You do not
@@ -99,7 +100,7 @@ learned from both sides — UI paths follow the app's actual UI
 language (now structures.md #21).
 → [`id-translate-before-after.md`](eval/before-after/id-translate-before-after.md)
 
-### id-longform · 1/2
+### id-longform · 4/5
 
 > **Without:** an Anda-addressed essay with semicolon punchlines.
 > Judge: *"I don't forward consultant-voiced think pieces to the team
@@ -115,7 +116,7 @@ skill arm's kamu as junior — *"kalau sales datang ke toko saya pasti
 bilang 'Pak'."* Audience age now weighs on register.
 → [`id-longform-before-after.md`](eval/before-after/id-longform-before-after.md)
 
-### id-humanizer · 0/2 — the loss that fixed the skill
+### id-humanizer · 3/5 — 0/2, fixed, then 3/3
 
 > **Input:** "…Demikian pengumuman ini kami sampaikan… atas perhatian
 > dan kerja sama para pengguna, kami ucapkan terima kasih."
@@ -124,13 +125,14 @@ bilang 'Pak'."* Audience age now weighs on register.
 > membaca surat dari kantor kelurahan… penutup surat resmi yang
 > distempel, bukan yang diucapkan orang."*
 
-Both picks went to the no-skill arm. Root cause identical in both:
+Both loop-5 picks went to the no-skill arm. Root cause identical in both:
 formulaic closers mis-classified as voice. `voice.md` now rules
 **"Formulaic closers are tells, not voice."** The fix postdates the
-A/B — re-measuring takes new samples, per the no-rerun rule.
+A/B — re-measuring takes new samples, per the no-rerun rule. Loop 7
+brought those samples: **3/3 to the skill arm.** The fix, measured.
 → [`id-humanizer-before-after.md`](eval/before-after/id-humanizer-before-after.md)
 
-### id-social · 2/2
+### id-social · 4/5
 
 > **Without:** "Anak Jatim, stop scroll dulu." … "Tag temenmu yang
 > ngaku tahan pedes…" Judge: *"kayak page Facebook zaman 2021."*
@@ -140,8 +142,10 @@ A/B — re-measuring takes new samples, per the no-rerun rule.
 > one word: "kamu tim level berapa?" Judge: *"itu bahasa TikTok, bukan
 > bahasa iklan… saya langsung ketik '3' di komen, nggak perlu mikir."*
 
-Both judges quoted the platform rules back. Dated slang was refused
-by the staleness rule.
+Both loop-5 judges quoted the platform rules back. Dated slang was
+refused by the staleness rule. The loop-7 TikTok loss taught the
+CTA-reason rule (state what answering gets the viewer), encoded
+same-day into tiktok.md.
 → [`id-social-before-after.md`](eval/before-after/id-social-before-after.md)
 
 ### id-reader · the judging half
@@ -153,12 +157,28 @@ bukti…"* → after the rewrite, same persona: *"malam ini aku coba tanya
 menu seminggu."* Wild eval: 4 of 5 samples flipped; the miss is kept.
 → [`id-reader-before-after.md`](eval/before-after/id-reader-before-after.md)
 
+### The instruction-language experiment · Indonesian-guided 3/3
+
+The question that opened this repo: does writing the skill itself in
+Indonesian improve the model's Indonesian? Loop 7 built a native
+Indonesian twin of id-copy (same rules, same sources — instruction
+language the only variable) and ran it blind against the English
+skill. Indonesian-guided won all three samples (one colored by an English-arm
+surface wobble — hashtags on WA, disclosed in the record), and the named risk
+(formal instructions priming formal output) did not show — judges
+called the Indonesian-guided drafts MORE colloquial: *"'Garing' bukan
+'renyah'… 'tombol Beli Sekarang' itu emang tombol yang ada di
+Shopee — gak nyasar."* n=3, directional — the twin stays an experiment artifact
+until more skills and samples say otherwise.
+→ [`instrlang-ab.md`](eval/verdicts/instrlang-ab.md)
+
 ### id-bench · the harness
 
 The discipline productized: blind judges, randomized recorded orders,
 forced picks, hesitation notes kept, all arms retained verbatim. Its
-demo receipt is this repo's own four-skill A/B run — **4/8** aggregate,
-every loss localized to a line and fixed the same day. One judge's
+demo receipts are the repo's own eval rounds — aggregate **19/25**
+across loops 3+5+7, every loss localized to a line and either fixed
+same-day or recorded as a rule's known cost. One judge's
 recorded hesitation: *"Version 1 is the better argument and Version 2 is the
 better conversation, and I buy from conversations…"*
 → [`id-bench-before-after.md`](eval/before-after/id-bench-before-after.md)
