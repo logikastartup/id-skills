@@ -157,20 +157,24 @@ bukti…"* → after the rewrite, same persona: *"malam ini aku coba tanya
 menu seminggu."* Wild eval: 4 of 5 samples flipped; the miss is kept.
 → [`id-reader-before-after.md`](eval/before-after/id-reader-before-after.md)
 
-### The instruction-language experiment · Indonesian-guided 3/3
+### The instruction-language experiment · asked twice, answered both ways
 
 The question that opened this repo: does writing the skill itself in
 Indonesian improve the model's Indonesian? Loop 7 built a native
 Indonesian twin of id-copy (same rules, same sources — instruction
 language the only variable) and ran it blind against the English
-skill. Indonesian-guided won all three samples (one colored by an English-arm
-surface wobble — hashtags on WA, disclosed in the record), and the named risk
-(formal instructions priming formal output) did not show — judges
-called the Indonesian-guided drafts MORE colloquial: *"'Garing' bukan
-'renyah'… 'tombol Beli Sekarang' itu emang tombol yang ada di
-Shopee — gak nyasar."* n=3, directional — the twin stays an experiment artifact
-until more skills and samples say otherwise.
-→ [`instrlang-ab.md`](eval/verdicts/instrlang-ab.md)
+skill: Indonesian-guided 3/3, its drafts read as MORE colloquial at
+the same register — *"'Garing' bukan 'renyah'… 'tombol Beli Sekarang'
+itu emang tombol yang ada di Shopee — gak nyasar."* Loop 8 built the
+twin of a second skill, id-humanizer, and the answer flipped:
+English-guided 2/3, with the Indonesian-guided arm trending formal —
+one judge read its kept superlative apology as *"Mohon maaf yang
+sebesar-besarnya — formula wajib surat pernyataan bank dan maskapai,
+bukan bahasa pemilik toko kue"*. Aggregate across both skills: 4/6 —
+a real effect on copy, not on humanizer. Migration stays parked; both
+records are published as-is, loss included.
+→ [`instrlang-ab.md`](eval/verdicts/instrlang-ab.md) ·
+[`instrlang-ab-2.md`](eval/verdicts/instrlang-ab-2.md)
 
 ### id-bench · the harness
 

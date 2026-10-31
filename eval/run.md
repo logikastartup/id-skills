@@ -22,6 +22,7 @@ added 3 more samples per skill (n=5 total; id-copy n=5 via loops 3+7)
 | id-social | `social-1.md`, `social-2.md` (briefs) | plain write | loads `id-social/SKILL.md` + the one platform file | tiktok-viewer (s-1) · startup-linkedin (s-2) |
 | id-bench | demo = the loop-5 + loop-7 A/B runs, recorded per its own protocol | — | — | (the runs themselves are the artifact: `verdicts/bench-demo.md`) |
 | instrlang (loop 7) | `copy-3.md`–`copy-5.md` (shared with id-copy's loop-7 run) | English-guided id-copy (full skill) | Indonesian-guided twin `eval/instrlang/id-copy-id/` (same rules, instruction language the only variable) | wa-buyer (c-3) · shopee-ibu (c-4/5) — **ID-guided 3/3**, see `verdicts/instrlang-ab.md` |
+| instrlang-2 (loop 8) | `humanize-6.md`–`humanize-8.md` (fresh, no reuse) | English-guided id-humanizer (full skill) | Indonesian-guided twin `eval/instrlang/id-humanizer-id/` (validity-gated pre-A/B: parity + native-register critics, outputs retained) | member-aktif (h-6) · ibu-penghuni (h-7) · pelanggan-kecewa (h-8) — ad-hoc briefs retained at `eval/instrlang/personas/` — **EN-guided 2/3** (all judges saw EN first; dispatch deviation disclosed in the record), see `verdicts/instrlang-ab-2.md` |
 
 Arm B's process/verification notes are stripped before judging — arms
 are compared on text alone. Records land in `verdicts/<skill>-ab.md`

@@ -106,7 +106,7 @@ occasional "!" or "…" survives this pass.
   copyediting" — invisible editing, the "sounds like me" test, err
   toward query.
 - Haryadi (2021), Buku Ajar Keredaksian dan Penyuntingan, UM
-  Palembang — editor ≠ author; LMSPada penyuntingan checklist lists
+  Palembang — editor ≠ author; an editing checklist in that tradition lists
   "gaya penulis" as a thing the editor must attend to.
 - Kalimat efektif / boros kata: id.wikipedia (Badudu, Arifin & Tasai,
   Joko Widodo); binus.ac.id/malang kehematan + kata baku examples.

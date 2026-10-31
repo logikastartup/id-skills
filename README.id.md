@@ -177,20 +177,27 @@ yang sama: *"malam ini aku coba tanya menu seminggu."* Evaluasi sampel
 liar: 4 dari 5 berubah total, satu kegagalan dipertahankan.
 → [`id-reader-before-after.md`](eval/before-after/id-reader-before-after.md)
 
-### Eksperimen bahasa instruksi · versi Indonesia 3/3
+### Eksperimen bahasa instruksi · ditanya dua kali, jawabannya berbeda
 
 Pertanyaan yang membuka repo ini: kalau skill-nya ditulis dalam
 bahasa Indonesia, apakah bahasa Indonesianya ikut membaik? Loop 7
 membangun kembaran id-copy yang ditulis langsung dalam bahasa
-Indonesia (aturan dan sumber sama — bahasa instruksi menjadi satu-satunya variabelnya) lalu menguji buta melawan skill berbahasa
-Inggris. Versi Indonesia menang tiga dari tiga, dan risiko yang
-sudah dinamai (instruksi baku menular jadi output baku) tidak
-terjadi — hakim justru menyebut draf versi Indonesia lebih santai
-(kolokial) di register yang sama:
+Indonesia (aturan dan sumber sama — bahasa instruksi menjadi
+satu-satunya variabelnya) lalu menguji buta melawan skill berbahasa
+Inggris: versi Indonesia 3/3, drafnya terbaca lebih santai
+(kolokial) di register yang sama —
 *"'Garing' bukan 'renyah'… 'tombol Beli Sekarang' itu emang tombol
-yang ada di Shopee — gak nyasar."* n=3 — sekadar petunjuk arah. Kembarannya tetap artefak
-eksperimen sampai skill dan sampel lain mengatakan hal serupa.
-→ [`instrlang-ab.md`](eval/verdicts/instrlang-ab.md)
+yang ada di Shopee — gak nyasar."* Loop 8 membangun kembaran skill
+kedua, id-humanizer, dan jawabannya berbalik: versi Inggris 2/3,
+dengan lengan versi Indonesia cenderung lebih formal — seorang
+hakim membaca maaf superlatif yang dipertahankan lengan itu
+sebagai *"Mohon maaf yang sebesar-besarnya — formula wajib surat
+pernyataan bank dan maskapai, bukan bahasa pemilik toko kue"*.
+Gabungan dua skill: 4/6 — efeknya nyata di copy, tidak di
+humanizer. Migrasi komponen tetap diparkir. Dua rekamannya terbit
+apa adanya, kalah termasuk.
+→ [`instrlang-ab.md`](eval/verdicts/instrlang-ab.md) ·
+[`instrlang-ab-2.md`](eval/verdicts/instrlang-ab-2.md)
 
 ### id-bench · alat ujinya
 

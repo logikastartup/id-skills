@@ -2,7 +2,7 @@
 
 `komponen: KEMBARAN id-copy@v1` · ditulis langsung dalam bahasa Indonesia
 (instruksi); aturan, penanda, dan sumber sama dengan
-`../../../id-copy/references/tells.md`. Satu tell per entri: pola →
+`../../../../id-copy/references/tells.md`. Satu tell per entri: pola →
 kenapa gagal → perbaikan → sumber. Penanda: **[dok]** = didokumentasikan pihak lain (sumber
 disebut; URL di daftar sumber), **[inf]** =
 disimpulkan dari tata bahasa yang terdokumentasi, **[eval]** =
@@ -128,5 +128,5 @@ Medium "4 Tanda Kaku" (diambil) · Erafone "Ciri-Ciri Tulisan AI"
 halaman BBPMP Jateng (diambil) · keluarga korpus Lemon8 · utas
 register-gap r/indonesia 2015 · UNSW Johnson 2006 · evaluasi MT
 EN-ID SSRN. URL sampel liar bersumber ada di
-`../../../eval/samples/`; verifikasi ulang URL mana pun sebelum
+`../../../../eval/samples/`; verifikasi ulang URL mana pun sebelum
 mengutipnya ke luar.

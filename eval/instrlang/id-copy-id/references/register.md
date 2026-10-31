@@ -2,7 +2,7 @@
 
 `komponen: KEMBARAN id-copy@v1` · ditulis langsung dalam bahasa Indonesia
 (instruksi); aturan dan sumber sama dengan
-`../../../id-copy/references/register.md`.
+`../../../../id-copy/references/register.md`.
 
 Pilih SATU tingkat secara eksplisit sebelum menulis. Rata-rata di
 tengah tingkat adalah cara copy jadi "aman tapi lebay". Semua contoh
