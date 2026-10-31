@@ -50,6 +50,21 @@ Dua skill ini membuat hasil copy makin tajam. Keduanya bukan pengganti
 telinga penutur asli — setiap output `id-copy` menyertakan pengingat:
 serahkan dulu dibaca penutur asli sebelum dipublikasikan.
 
+## Hasil
+
+Model yang sama, dengan vs tanpa skill — pembaca persona buta:
+
+| Sampel | Tanpa skill | Dengan skill | Pilihan pembaca buta |
+|---|---|---|---|
+| Promosi WA (gen-1) | trusted ✗ · would_act ✗ | ✓ · ✓ | versi skill |
+| Caption IG (gen-2) | trusted ✗ · would_act ✗ | ✓ · ✓ | versi skill |
+
+Sampel liar: 4 dari 5 flip semua verdict setelah ditulis ulang; satu
+kegagalan jujur dipertahankan (wild-3). Output lengkap tanpa potongan di
+[`eval/verdicts/ab-arms.md`](eval/verdicts/ab-arms.md) ·
+[`eval/verdicts/results.md`](eval/verdicts/results.md). n=2, buta,
+urutan diacak — ini arah, bukan statistik.
+
 ## Struktur
 
 ```

@@ -36,6 +36,21 @@ Re-run it yourself; the recipe is in [`eval/run.md`](eval/run.md).
 These skills sharpen output; they replace no native ear. Every `id-copy`
 output carries "hand to a native Indonesian reader before publishing".
 
+## Results
+
+Same model, with vs without the skill — blind persona readers:
+
+| Sample | Without skill | With skill | Blind pick |
+|---|---|---|---|
+| WA promo (gen-1) | trusted ✗ · would_act ✗ | ✓ · ✓ | skill version |
+| IG caption (gen-2) | trusted ✗ · would_act ✗ | ✓ · ✓ | skill version |
+
+Wild rewrites: 4 of 5 samples flipped every verdict; one honest failure
+kept (wild-3). Full outputs, uncropped:
+[`eval/verdicts/ab-arms.md`](eval/verdicts/ab-arms.md) ·
+[`eval/verdicts/results.md`](eval/verdicts/results.md). n=2, blind,
+order-randomized — directional, not statistics.
+
 ## Layout
 
 ```
